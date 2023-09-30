@@ -1,0 +1,134 @@
+
+
+
+
+.App {
+    --blue: hsl(246, 80%, 60%);/**/
+    --white: hsl(0, 0%, 100%);/**/
+    --very-dark-blue: hsl(226, 43%, 10%);/**/
+    --dark-blue: hsl(235, 46%, 20%);/**/
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-Blue: hsl(236, 100%, 87%);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-rows: repeat(2,200px);
+    grid-template-columns: repeat(4,225px);
+    gap: 20px;
+
+}
+
+.side-bar {
+    grid-row: span 2;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    position: relative;
+}
+
+.side-bar .top-container {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--blue);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.side-bar .bottom-cotainer {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 30px;
+}
+
+.side-bar .bottom-cotainer button {
+    background: none;
+    border: none;
+    font-size: 15px;
+}
+
+
+
+.side-bar .top-container > * {
+    margin-bottom: 20px;
+}
+
+.side-bar .top-container img {
+    width: 60px;
+    border: 3px solid var(--white);
+    border-radius: 50vh;
+}
+
+.side-bar .top-container p {
+ color: var(--pale-Blue);
+ font-size: 14px;
+}
+
+.side-bar .top-container h1 {
+    font-weight: 300;
+    color: var(--white);
+}
+
+
+.item {
+    background-color: pink;
+    border-radius: 15px;
+}
+
+@media (max-width: 980px){
+
+    .App {
+        display: block;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 90%;
+        height: fit-content;
+    }
+
+    .App > * { 
+        margin-bottom: 30px;
+    }
+
+    .side-bar {
+        width: 100%;
+        height: 190px;
+    }
+
+    .side-bar .top-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 17px;
+        padding: 0 40px;
+    }
+
+    .side-bar .top-container > *{
+        margin: 0;
+    }
+
+    .side-bar .top-container h1 {
+        font-size: 25px;
+    
+    }
+
+    .side-bar .bottom-cotainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+}
+
